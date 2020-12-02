@@ -9,10 +9,13 @@
 <body>
     <form align="center" action="http:XXX.com.tw" method="GET">
         <div>沒代誌我只是在練習</div><br>
-        用戶名：<input type="text" name="user" maxlength="6"> <br>
-        密碼：<input type="password" name="password" maxlength="10"><br>
-        性別：男 <input type="radio" name="sex" vlaue="男"> 女 <input type="radio" name="sex" value="女"> <br> 
-        愛好：吃飯<input type="checkbox" name="habbit" value="吃飯"> 睡覺 <input type="checkbox" name="habbit" value="睡覺"> 運動 <input type="checkbox" name="habbit" value="運動"> <br>
+        <label for ="name">用戶名：</label>
+        <input type="text" id="name" name="user" maxlength="6"> <br>
+        <label for ="password">密碼：</label>
+        <input type="password" id="password" name="password" maxlength="10"><br>
+        性別： <input type="radio"  id="sex male" name="sex" vlaue="男"> <label for ="sex male">男</label> 
+         <input type="radio" id="sex female" name="sex" value="女"><label for name="sex female">女</label> <br> 
+        愛好：吃飯<input type="checkbox" name="habbit" value="吃飯"> 睡覺 <input type="checkbox" name="habbit" value="睡覺"> 運動 <input type="checkbox" name="habbit" valu e="運動"> <br>
        <br>
         <input type="submit" value="確定娶13" >
         <input type="reset" value="清除重填" ><br>
