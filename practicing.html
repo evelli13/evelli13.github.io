@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>13筆記</title>
+    <style>
+        .red{
+            width: 100px;
+            height: 100px;
+            /* 背景顏色 */
+            background-color: red;
+        }
+        .green{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        /* ID選擇器使用口訣：樣式透過#定義，結構透過ID調用，但只能用一次；類選擇器如.red得以被調用很多次 */
+        #pink{
+            color: palegreen;
+        }
+        body{
+            font-family:'microsoft blackbody','times new roman';
+        }
+    </style>
 </head>   
-    <font face="標楷體"></font>
 <body>
     <form align="center" action="http:XXX.com.tw" method="GET">
-        <div>沒代誌我只是在練習</div><br>
+        <!-- 練習一下註釋阿 -->
+        <div class="red">沒代誌我只是在練習</div><br>
         <label for ="name">用戶名：</label>
         <input type="text" id="name" name="user" maxlength="6"> <br>
         <label for ="password">密碼：</label>
@@ -34,10 +54,10 @@
         留言評論你家的工程師
         <textarea clos="20" row="4">有啥批評指教都歡迎你寫係阿
         </textarea>
-        <div></div><br>
+        <div class="green"></div><br>
         <input type="submit" value="確定" >
         <input type="reset" value="清除重填" ><br>
-        <div> </div><br>
+        <div></div><br>
         上傳行房紀錄片請點<input type="file"> 
         <!--單選按鈕和複選按鈕可以設置checked屬性，當頁面打開的時候就已經默認該按鈕-->
     </form>
@@ -80,7 +100,7 @@
             <td>定義單選按鈕。</td>
         </tr>
         <tr>
-            <td>reset</td>
+            <td id="pink">reset</td>
             <td>定義重置按鈕。重置按鈕會清除表單中的所有數據。</td>
         </tr>
         <tr>
@@ -92,7 +112,7 @@
             <td>定義單行的輸入字段，用戶可在其中輸入文本。默認寬度為20 個字符。</td>
         </tr>
     </table>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 </body>
 </html>  
