@@ -1,77 +1,97 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>13筆記</title>
     <style>
-        .red{
-            width: 100px;
+        body {
+            font: 16px/28px "Microsoft blackbody", "times new roman";
+        }
+
+        .red {
+            /* width: 100px; */
             height: 100px;
             /* 背景顏色 */
             background-color: rgb(0, 174, 255);
-            text-align:center;
+            text-align: center;
         }
-        .green{
-            width: 100px;
+
+        .green {
+            /* width: 100px; */
             height: 100px;
             background-color: rgb(150, 208, 235);
         }
+
         /* ID選擇器使用口訣：樣式透過#定義，結構透過ID調用，但只能用一次；類選擇器如.red得以被調用很多次 */
-        #pink{
+        #pink {
             color: rgb(8, 8, 8);
         }
-        body{
-            font-family:'microsoft blackbody','times new roman';
+
+        body {
+            font-family: 'microsoft blackbody', 'times new roman';
             font-size: 20px;
         }
-        div{
-             text-decoration: underline; /*line-through、none*/
+
+        /* div {
+            text-decoration: underline;
+            /*line-through、none*/
+
+
+        */ p {
+            text-indent: 2em;
+            /* 使得第一行首行空格，或稱縮進;em代表一個文字大小→可以不用理會多少像素 */
         }
-        p{
-            text-indent: 2em; /* 使得第一行首行空格，或稱縮進;em代表一個文字大小→可以不用理會多少像素 */
-        }
-        
+
         /* 標題標籤較為特殊，需要單獨指定文字大小 */
-        /* 複合性代碼順序→font: font-style font-weight font-size/line-height font-family; */
+        /*  複合性代碼順序→font: font-style font-weight font-size/line-height font-family; */
         /* font: italic 700 16px 'microsoft blackbody'; */
         /* 顏色有這幾種寫法color: #ff0000; color: blue; color: rgb(255,0,0)*/
+        /* 後代選擇器 .blue ul li a{} */
+        .blue a {
+            font-size: 20px;
+            font-weight: 28px;
+            color: red;
+        }
     </style>
-</head>   
+</head>
+
 <body>
     <form align="center" action="http:XXX.com.tw" method="GET">
         <!-- 練習一下註釋阿 -->
         <div class="red">沒代誌我只是在練習</div><br>
-        <label for ="name">用戶名：</label>
+        <label bel for="name">用戶名：</label>
         <input type="text" id="name" name="user" maxlength="6"> <br>
-        <label for ="password">密碼：</label>
+        <label for="password">密碼：</label>
         <input type="password" id="password" name="password" maxlength="10"><br>
-        性別： <input type="radio"  id="sex male" name="sex" vlaue="男"> <label for ="sex male">男</label> 
-         <input type="radio" id="sex female" name="sex" value="女"><label for name="sex female">女</label> <br> 
-        愛好：吃飯<input type="checkbox" name="habbit" value="吃飯"> 睡覺 <input type="checkbox" name="habbit" value="睡覺"> 運動 <input type="checkbox" name="habbit" valu e="運動"> <br>
-       <br>
+        性別： <input type="radio" id="sex male" name="sex" vlaue="男"> <label for="sex male">男</label>
+        <input type="radio" id="sex female" name="sex" value="女"><label for name="sex female">女</label> <br>
+        愛好：吃飯<input type="checkbox" name="habbit" value="吃飯"> 睡覺 <input type="checkbox" name="habbit" value="睡覺"> 運動
+        <input type="checkbox" name="habbit" valu e="運動"> <br>
+        <br>
         抉擇人生的時刻：
         <select>
-        <option>娶13當老婆</option>
-        <option>還是娶我當老婆</option>
-        <option>只能當13的工程師</option>
-        <option>刷黑人但還是不能當CC家的工程師</option>
-        <option>其他選項-你可以說說你的想法</option>
+            <option>娶13當老婆</option>
+            <option>還是娶我當老婆</option>
+            <option>只能當13的工程師</option>
+            <option>刷黑人但還是不能當CC家的工程師</option>
+            <option>其他選項-你可以說說你的想法</option>
         </select><br>
         生活小情趣你偏好哪一種?
         <select>
-        <option>每天都讓你爽</option>
-        <option selected="selected">或者每天都讓我爽</option>
+            <option>每天都讓你爽</option>
+            <option selected="selected">或者每天都讓我爽</option>
         </select>
         <div></div><br>
         留言評論你家的工程師
         <textarea clos="20" row="4">有啥批評指教都歡迎你寫係阿
         </textarea>
         <div class="green"></div><br>
-        <input type="submit" value="確定" >
-        <input type="reset" value="清除重填" ><br>
+        <input type="submit" value="確定">
+        <input type="reset" value="清除重填"><br>
         <div></div><br>
-        上傳行房紀錄片請點<input type="file"> 
+        上傳行房紀錄片請點<input type="file">
         <!--單選按鈕和複選按鈕可以設置checked屬性，當頁面打開的時候就已經默認該按鈕-->
     </form>
     <div></div><br>
@@ -81,12 +101,12 @@
     <table align="center" border="1" cellspacing="0">
         <caption align="top"> Input語法說明 </caption>
         <tr>
-        <th>input值</th>
-        <th>描述</th>
+            <th>input值</th>
+            <th>描述</th>
         </tr>
         <tr>
             <td>button</td>
-            <td>定義可點及按鈕(多數情況下，用於通過JavaScript啟動腳本)</td>  
+            <td>定義可點及按鈕(多數情況下，用於通過JavaScript啟動腳本)</td>
         </tr>
         <tr>
             <td>checkbox</td>
@@ -125,8 +145,18 @@
             <td>定義單行的輸入字段，用戶可在其中輸入文本。默認寬度為20 個字符。</td>
         </tr>
     </table>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <div></div>
     <div></div>
+    <div class="blue">
+        <ul>
+            <li><a herf="#">想不到名字</a>
+            <li><a herf="#">啾太郎</a>
+            <li><a herf="#">當人可真累</a>
+        </ul>
+
+    </div>
 </body>
-</html>  
+
+</html>
